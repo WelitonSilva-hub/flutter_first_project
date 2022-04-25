@@ -56,9 +56,9 @@ class HeaderWithSearchBox extends StatelessWidget {
               child: Container(
                 height: 54,
                 alignment: Alignment.center,
-                margin: const EdgeInsets.symmetric(
-                  horizontal: kDefaultPadding,
-                ),
+                margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -74,7 +74,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       child: TextField(
-                        onChanged: ((value) => {}),
+                        onChanged: ((value) {}),
                         decoration: InputDecoration(
                           hintText: "Search",
                           hintStyle: TextStyle(
