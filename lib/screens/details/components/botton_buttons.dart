@@ -16,13 +16,17 @@ class BottonButtons extends StatelessWidget {
         SizedBox(
           width: size.width / 2,
           height: 84,
-          child: FlatButton(
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(20),
+          child: TextButton(
+            style: ButtonStyle(
+              shape: MaterialStateProperty.all(
+                const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                  ),
+                ),
               ),
+              overlayColor: MaterialStateProperty.all(kPrimaryColor),
             ),
-            color: kPrimaryColor,
             onPressed: () {},
             child: const Text(
               "Buy Now",
@@ -34,7 +38,7 @@ class BottonButtons extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: FlatButton(
+          child: TextButton(
             onPressed: () {},
             child: const Text("Description"),
           ),
